@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>  
+<title>WATER QUALITY</title>
+<!-- BootStrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+rel="stylesheet"
+integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+crossorigin="anonymous">
+  <section class="header">
+    <div class="text-box">
+        <h1>WATER QUALITY PREDICTION</h1>
+        <p>DOMIAN-MACHINE LEARNING<br>
+        </p>
+      </div>
+    </section>    
+<style>
+input{
+    text-align: center;
+    width: 20%;
+    height: 70px;
+    font-size: 14px;
+    padding-top:0px ;
+}
+.thick {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: blue;
+  text-decoration-thickness: 2px;
+}
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url("");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.text-box{
+    width: 90%;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    font-size: medium;
+   left: 50%;
+   bottom: 150px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+    .text-box h1{
+        font-size: 50px;
+    }
+    .text-box p{
+        margin: 10px 0 40px;
+        font-size: 24px;
+        font-style: italic;
+        color: rgb(253, 16, 127);
+    }
+
+    .facil{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+
+
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url("https://cdn.pixabay.com/photo/2014/12/24/05/02/drop-of-water-578897__480.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.facil-col {
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 10px;
+    text-align: left;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image:url("https://img.freepik.com/premium-photo/water-splashes-with-copy-space_143092-563.jpg?w=2000");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+</style>
+</head>
+
+<!--------facilties-------->
+<section class="facil">
+
+
+<!---------------------------------------------------------->
+
+<body  style="background-color:rgba(149, 189, 241, 0.966);">
+
+ 
+  <div class="login">
+ 
+  <form action="{{ url_for('predict')}}"method="post">
+ <center>
+   <h1 style="color:rgb(255, 0, 0);">Enter  values</h1>
+ <div id="bodycontent">
+
+
+<!---------------------------------------------------------->
+<label>
+
+ <div class="row">
+
+     <div class="facil-col">
+      pH value  :  <input type="text" name="ph" placeholder="pH value" style="background-color:#DCDCDC; height:40px"  required="required" />
+      
+      Hardness :   <input type="text" name="Hardness" placeholder="Hardness"  style="background-color:#DCDCDC;  height:40px"required="required" />
+   Solids :<input type="text" name="Solids" placeholder="Solids"  style="background-color:#DCDCDC; height:40px"required="required" />
+      </div>
+     <div class="facil-col">
+   
+      Chloramines : <input type="text" name="Chloramines" placeholder="Chloramines"  style="background-color:#DCDCDC; height:40px"required="required" />
+
+      Sulfate :   <input type="text" name="Sulfate" placeholder="Sulfate" style="background-color:#DCDCDC; height:40px" required="required" />
+
+      Conductivity :    <input type="text" name="Conductivity" placeholder="Conductivity"  style="background-color:#DCDCDC; height:40px" required="required" />
+  </div>
+  <div class="facil-col">
+   
+    Organic_carbon :  <input type="text" name="Organic_carbon" placeholder="Organic_carbon" style="background-color:#DCDCDC; height:40px" required="required" />
+    Trihalomethanes :<input type="text" name="Trihalomethanes" placeholder="Trihalomethanes" style="background-color:#DCDCDC; height:40px"  required="required" />
+  Turbidity :   <input type="text" name="Turbidity" placeholder="Turbidity" style="background-color:#DCDCDC; height:40px"  required="required" /><br><br><br>
+</div>
+
+</div>
+<!-- Show button -->
+<div class="button_cont" ><a class="button_css"  target="_blank" rel="nofollow noopener">
+  <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Water quality Test</strong></button></a>
+</center>
+</label>
+</div>
+</form>
+
+</section>
+
+<center>
+  <h1>{{prediction_text }}</h1>
+</center>
+</div>
+
+<!----------footer-------->
+
+</section>
+<br><br><br><br>
+<footer>
+  <center>
+  <h1>Team Members:</h1> <br> <h2><i>Priya Darshini(15.12)| priya Darshini(19.08)| Sowmiya | Pushpa Roja </i></h2></footer>
+  
+
+</center>
+</section>
+
+</body>
+</html>
